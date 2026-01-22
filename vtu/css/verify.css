@@ -1,0 +1,82 @@
+:root {
+    --primary: #0A2540;
+    --secondary: #D4AF37;
+    --accent: #16A34A;
+    --error: #DC2626;
+    --bg: #F5F7FA;
+    --text: #1F2937;
+    --muted: #6B7280;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header & Nav */
+header { background: var(--white); padding: 1.2rem 0; border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 1000; }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+.logo span { color: var(--secondary); }
+.nav-links { display: flex; list-style: none; gap: 20px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 600; }
+.btn-outline { border: 1.5px solid var(--primary); padding: 8px 18px; border-radius: 8px; font-size: 0.9rem; }
+
+/* Reminder Banner */
+.verification-reminder { background: #FFFBEB; color: #92400E; padding: 12px; text-align: center; font-size: 0.85rem; border-bottom: 1px solid #FEF3C7; }
+.verification-reminder i { margin-right: 8px; }
+
+/* Main Wrapper */
+.verify-wrapper { min-height: calc(100vh - 80px); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
+
+.verify-card { background: var(--white); width: 100%; max-width: 500px; padding: 50px; border-radius: 30px; box-shadow: 0 20px 50px rgba(10, 37, 64, 0.05); text-align: center; }
+
+.icon-stack { width: 70px; height: 70px; background: rgba(22, 163, 74, 0.1); color: var(--accent); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 25px; }
+
+.verify-header h1 { font-size: 1.8rem; color: var(--primary); margin-bottom: 10px; }
+.verify-header p { color: var(--muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 30px; }
+
+/* Tabs */
+.verify-tabs { display: flex; background: #F3F4F6; padding: 5px; border-radius: 12px; margin-bottom: 30px; }
+.tab-btn { flex: 1; padding: 10px; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; color: var(--muted); transition: 0.3s; }
+.tab-btn.active { background: var(--white); color: var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+/* Tab Content */
+.tab-content { display: none; animation: fadeIn 0.4s ease; }
+.tab-content.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* OTP Styles */
+.otp-input-wrapper { display: flex; gap: 10px; justify-content: center; margin: 20px 0 30px; }
+.otp-digit { width: 45px; height: 55px; text-align: center; font-size: 1.5rem; font-weight: 800; border: 2px solid #E5E7EB; border-radius: 10px; background: #F9FAFB; transition: 0.3s; }
+.otp-digit:focus { border-color: var(--primary); background: white; outline: none; box-shadow: 0 0 0 4px rgba(10, 37, 64, 0.05); }
+
+/* Email Visual */
+.email-visual { padding: 30px; background: #F8FAFC; border-radius: 20px; margin-bottom: 25px; }
+.email-visual i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+
+/* Buttons */
+.btn-verify { width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+.btn-verify:hover { background: #16365a; transform: translateY(-2px); }
+
+.resend-text { margin-top: 20px; font-size: 0.9rem; color: var(--muted); }
+.resend-text a { color: var(--primary); font-weight: 700; text-decoration: none; }
+
+/* Status Boxes */
+.status-box { display: none; padding: 15px; border-radius: 12px; margin-top: 20px; font-size: 0.9rem; font-weight: 600; align-items: center; gap: 10px; }
+.status-box.success { background: #DCFCE7; color: #166534; }
+.status-box.error { background: #FEE2E2; color: #991B1B; }
+
+.security-note { margin-top: 40px; border-top: 1px solid #F1F5F9; padding-top: 20px; display: flex; gap: 10px; align-items: center; text-align: left; font-size: 0.8rem; color: var(--muted); }
+.security-note i { color: var(--secondary); font-size: 1.2rem; }
+
+/* Hamburger Menu */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 25px; height: 3px; background: var(--primary); border-radius: 10px; }
+
+@media (max-width: 768px) {
+    .verify-card { padding: 30px 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+}
