@@ -15,7 +15,7 @@
         <nav class="navbar container">
             <div class="logo">Swift<span>Pay</span></div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="plans.php">Pricing</a></li>
                 <li><a href="terms.php" class="active">Legal</a></li>
             </ul>
@@ -161,4 +161,5 @@
         };
     </script>
 </body>
+
 </html>
