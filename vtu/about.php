@@ -30,7 +30,7 @@
         <nav class="navbar">
             <div class="logo">Swift<span>Pay</span></div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.php" class="active">About Us</a></li>
                 <li><a href="#vision">Our Vision</a></li>
                 <li><a href="#values">Core Values</a></li>
@@ -177,4 +177,5 @@
         });
     </script>
 </body>
+
 </html>
