@@ -15,7 +15,7 @@
         <nav class="navbar">
             <div class="logo">Swift<span>Pay</span></div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.php">About Us</a></li>
                 <li><a href="pricing.php" class="active">Pricing</a></li>
                 <li><a href="#data">Data Rates</a></li>
@@ -228,4 +228,5 @@
         });
     </script>
 </body>
+
 </html>
